@@ -73,7 +73,7 @@
                 android:text="Power"
                 android:textSize="16sp"/>
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchPower"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -227,7 +227,7 @@
                 android:text="Direction Reversed"
                 android:textSize="16sp"/>
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/switchDirection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

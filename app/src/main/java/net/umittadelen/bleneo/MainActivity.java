@@ -31,6 +31,7 @@ import androidx.core.app.ActivityCompat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import androidx.appcompat.widget.SwitchCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private BluetoothAdapter btAdapter;
     private BluetoothLeScanner btScanner;
     private BluetoothGatt btGatt;
-    private List<BluetoothDevice> deviceList = new ArrayList<>();
+    private final List<BluetoothDevice> deviceList = new ArrayList<>();
     private ArrayAdapter<String> deviceAdapter;
 
     private Button btnScan, btnConnect, btnSetColor, btnSetBrightness;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinnerDevices, spinnerEffect;
     private EditText etColor;
     private SeekBar seekBrightness, seekSpeed;
-    private Switch switchPower, switchDirection;
+    private SwitchCompat switchPower, switchDirection;
     private TextView tvStatus, tvBrightness, tvSpeed;
 
     private boolean isScanning = false;
@@ -242,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
         tvStatus.setText("Scan stopped");
     }
 
-    private ScanCallback scanCallback = new ScanCallback() {
+    private final ScanCallback scanCallback = new ScanCallback() {
         @Override
         public void onScanResult(int callbackType, ScanResult result) {
             BluetoothDevice device = result.getDevice();
@@ -296,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
         btGatt = device.connectGatt(this, false, gattCallback);
     }
 
-    private BluetoothGattCallback gattCallback = new BluetoothGattCallback() {
+    private final BluetoothGattCallback gattCallback = new BluetoothGattCallback() {
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
             if (newState == BluetoothProfile.STATE_CONNECTED) {
