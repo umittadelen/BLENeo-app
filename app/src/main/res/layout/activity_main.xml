@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not connected"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Scan Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BLE Devices"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerDevices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Power Control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Power"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/switchPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"/>
+        </LinearLayout>
+
+        <!-- Color Control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color (Hex)"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/etColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="FF0000"
+                android:inputType="text"
+                android:maxLength="6"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"/>
+        </LinearLayout>
+
+        <!-- Brightness Control -->
+        <TextView
+            android:id="@+id/tvBrightness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brightness: 128"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <SeekBar
+                android:id="@+id/seekBrightness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255"
+                android:progress="128"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetBrightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"/>
+        </LinearLayout>
+
+        <!-- Effect Control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerEffect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"/>
+        </LinearLayout>
+
+        <!-- Speed Control -->
+        <TextView
+            android:id="@+id/tvSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speed: 128"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <SeekBar
+                android:id="@+id/seekSpeed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="255"
+                android:progress="128"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"/>
+        </LinearLayout>
+
+        <!-- Direction Control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Direction Reversed"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/switchDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSetDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
