@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
         seekBrightness.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvBrightness.setText("Brightness: " + progress);
+                tvBrightness.setText(getString(R.string.brightness_label, progress));
             }
             public void onStartTrackingTouch(SeekBar seekBar) {}
             public void onStopTrackingTouch(SeekBar seekBar) {}
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
         seekSpeed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                tvSpeed.setText("Speed: " + progress);
+                tvSpeed.setText(getString(R.string.speed_label, progress));
             }
             public void onStartTrackingTouch(SeekBar seekBar) {}
             public void onStopTrackingTouch(SeekBar seekBar) {}
@@ -214,8 +214,8 @@ public class MainActivity extends AppCompatActivity {
         deviceAdapter.clear();
         btScanner.startScan(scanCallback);
         isScanning = true;
-        btnScan.setText("Stop Scan");
-        tvStatus.setText("Scanning...");
+        btnScan.setText(getString(R.string.scan_stop));
+        tvStatus.setText(getString(R.string.scan_scanning));
     }
 
     private void stopScan() {
@@ -235,8 +235,8 @@ public class MainActivity extends AppCompatActivity {
 
         btScanner.stopScan(scanCallback);
         isScanning = false;
-        btnScan.setText("Scan");
-        tvStatus.setText("Scan stopped");
+        btnScan.setText(getString(R.string.scan_btn_label));
+        tvStatus.setText(getString(R.string.scan_stopped));
     }
 
     private final ScanCallback scanCallback = new ScanCallback() {
@@ -263,8 +263,8 @@ public class MainActivity extends AppCompatActivity {
             runOnUiThread(() -> {
                 showToast("Scan failed with error: " + errorCode);
                 isScanning = false;
-                btnScan.setText("Scan");
-                tvStatus.setText("Scan failed");
+                btnScan.setText(getString(R.string.scan_btn_label));
+                tvStatus.setText(getString(R.string.scan_failed));
             });
         }
     };
@@ -289,7 +289,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        tvStatus.setText("Connecting...");
+        tvStatus.setText(getString(R.string.scan_connecting));
         btGatt = device.connectGatt(this, false, gattCallback);
     }
 
@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
             if (newState == BluetoothProfile.STATE_CONNECTED) {
                 isConnected = true;
                 runOnUiThread(() -> {
-                    tvStatus.setText("Connected");
+                    tvStatus.setText(getString(R.string.scan_connected));
                     setControlsEnabled(true);
                 });
 
@@ -313,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                 isConnected = false;
                 runOnUiThread(() -> {
-                    tvStatus.setText("Disconnected");
+                    tvStatus.setText(getString(R.string.scan_disconnected));
                     setControlsEnabled(false);
                 });
             }

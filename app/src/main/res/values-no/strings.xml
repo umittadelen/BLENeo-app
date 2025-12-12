@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BLENeo</string>
+    <string name="scan_stop">Stopp skanning</string>
+    <string name="scan_stopped">Skanning stoppet</string>
+    <string name="scan_failed">Skanning mislyktes</string>
+    <string name="scan_connecting">Kobler til…</string>
+    <string name="scan_connected">Tilkoblet</string>
+    <string name="scan_disconnected">Frakoblet</string>
+    <string name="scan_scanning">Skanner…</string>
+    <string name="scan_btn_label">Skann</string>
+    <string name="brightness_label">Lysstyrke: %d</string>
+    <string name="speed_label">Hastighet: %d</string>
+</resources>

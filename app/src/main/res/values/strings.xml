@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">BLENeo</string>
+    <string name="scan_stop">Stop Scan</string>
+    <string name="scan_stopped">Scan Stopped</string>
+    <string name="scan_failed">Scan Failed</string>
+    <string name="scan_connecting">Connecting…</string>
+    <string name="scan_connected">Connected</string>
+    <string name="scan_disconnected">Disconnected</string>
+    <string name="scan_scanning">Scanning…</string>
+    <string name="scan_btn_label">Scan</string>
+    <string name="brightness_label">Brightness: %d</string>
+    <string name="speed_label">Speed: %d</string>
 </resources>
