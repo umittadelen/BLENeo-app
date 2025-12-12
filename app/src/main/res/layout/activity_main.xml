@@ -35,8 +35,8 @@
             android:id="@+id/btnScan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scan"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp"
+            android:text="Scan" />
 
         <Spinner
             android:id="@+id/spinnerDevices"
@@ -86,6 +86,13 @@
                 android:text="Set"/>
         </LinearLayout>
 
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
+
         <!-- Color Control -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -117,6 +124,13 @@
                 android:layout_height="wrap_content"
                 android:text="Set"/>
         </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
 
         <!-- Brightness Control -->
         <TextView
@@ -150,6 +164,13 @@
                 android:text="Set"/>
         </LinearLayout>
 
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
+
         <!-- Effect Control -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -179,6 +200,13 @@
                 android:layout_height="wrap_content"
                 android:text="Set"/>
         </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
 
         <!-- Speed Control -->
         <TextView
@@ -211,6 +239,13 @@
                 android:layout_height="wrap_content"
                 android:text="Set"/>
         </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#CCCCCC"
+            android:layout_marginBottom="16dp"/>
 
         <!-- Direction Control -->
         <LinearLayout

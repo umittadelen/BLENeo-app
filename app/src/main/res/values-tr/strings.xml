@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BLENeo</string>
+    <string name="scan_stop">Taramayı Durdur</string>
+    <string name="scan_stopped">Taramayı Durduruldu</string>
+    <string name="scan_failed">Taramayı Sırasında Hata Olustu</string>
+    <string name="scan_connecting">Bağlanıyor…</string>
+    <string name="scan_connected">Bağlandı</string>
+    <string name="scan_disconnected">Bağlantı Kesildi</string>
+    <string name="scan_scanning">Taranıyor…</string>
+    <string name="scan_btn_label">Tara</string>
+    <string name="brightness_label">Parlaklık: %d</string>
+    <string name="speed_label">Hız: %d</string>
+</resources>
